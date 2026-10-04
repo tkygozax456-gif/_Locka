@@ -3,14 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الخزانات المتاحة</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>تفاصيل الحجز</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
 <div class="app">
+
 
     <header class="header">
 
@@ -19,365 +25,610 @@
              class="logo"
              alt="Locka">
 
-        <!-- القائمة -->
-        <button class="menu-button" id="menuButton">☰</button>
 
-        <div class="menu-dropdown" id="menuDropdown">
+        <!-- زر القائمة -->
+        <button class="menu-button"
+                id="menuButton">
+            ☰
+        </button>
 
-            <a href="index.html">
-                ⌂ الرئيسية
+
+        <!-- القائمة الجانبية -->
+        <div class="menu-dropdown"
+             id="menuDropdown">
+
+            <a href="index.html" class="active">
+                <span class="menu-icon">⌂</span>
+                <span>الرئيسية</span>
             </a>
 
             <a href="booking-details.html">
-                ▣ حجوزاتي
+                <span class="menu-icon">♙</span>
+                <span>حجوزاتي</span>
             </a>
 
             <a href="#">
-                ♧ التنبيهات
+                <span class="menu-icon">♧</span>
+                <span>التنبيهات</span>
             </a>
 
             <a href="#">
-                ♙ حسابي
+                <span class="menu-icon">♧</span>
+                <span>الدعم والمساعدة</span>
+            </a>
+
+            <a href="#">
+                <span class="menu-icon">♙</span>
+                <span>حسابي</span>
             </a>
 
         </div>
 
+
         <!-- زر الرجوع -->
-        <a href="javascript:history.back()" class="back">
+        <a href="javascript:history.back()"
+           class="back">
             ‹
         </a>
 
+
         <h1>
-            الخزانات المتاحة
+            تفاصيل الحجز
         </h1>
 
     </header>
 
 
+
     <main class="content">
 
-        <!-- المبنى والدور سيتم تحديدهم من المستخدم لاحقًا -->
-        <div class="location-box">
 
-            <h2>
-                المبنى:
-                <span id="buildingName">—</span>
-            </h2>
+        <!-- معلومات الخزانة -->
+        <div class="locker-info-card">
 
-            <p>
-                الدور:
-                <span id="floorName">—</span>
-                - اختر الخزانة المناسبة لك
-            </p>
-
-        </div>
-
-
-        <!-- توضيح الألوان -->
-        <div class="legend">
-
-            <div class="legend-item">
-
-                <span class="dot available-dot"></span>
-
-                متاح
-
+            <div class="locker-icon">
+                🔒
             </div>
 
+            <div>
 
-            <div class="legend-item">
-
-                <span class="dot reserved-dot"></span>
-
-                محجوز
+                <h2>
+                    الخزانة رقم
+                    <span id="lockerNumber">-</span>
+                </h2>
 
             </div>
 
         </div>
 
 
-        <!-- الخزانات -->
-        <div class="lockers">
 
-            <button class="locker available"
-                    data-locker="1">
-                1
-            </button>
-
-            <button class="locker available"
-                    data-locker="2">
-                2
-            </button>
-
-            <button class="locker available"
-                    data-locker="3">
-                3
-            </button>
-
-            <button class="locker reserved"
-                    disabled>
-                4
-            </button>
-
-            <button class="locker reserved"
-                    disabled>
-                5
-            </button>
+        <!-- تفاصيل الحجز -->
+        <h3 class="section-title">
+            تفاصيل الحجز
+        </h3>
 
 
-            <button class="locker available"
-                    data-locker="6">
-                6
-            </button>
 
-            <button class="locker available"
-                    data-locker="7">
-                7
-            </button>
-
-            <button class="locker reserved"
-                    disabled>
-                8
-            </button>
-
-            <button class="locker available"
-                    data-locker="9">
-                9
-            </button>
-
-            <button class="locker available"
-                    data-locker="10">
-                10
-            </button>
+        <div class="booking-form">
 
 
-            <button class="locker available"
-                    data-locker="11">
-                11
-            </button>
+            <!-- تاريخ البداية -->
+            <div class="form-group">
 
-            <button class="locker available"
-                    data-locker="12">
-                12
-            </button>
+                <label for="startDate">
+                    تاريخ البداية
+                </label>
 
-            <button class="locker reserved"
-                    disabled>
-                13
-            </button>
+                <input
+                    type="date"
+                    id="startDate"
+                    required>
 
-            <button class="locker reserved"
-                    disabled>
-                14
-            </button>
-
-            <button class="locker available"
-                    data-locker="15">
-                15
-            </button>
+            </div>
 
 
-            <button class="locker available"
-                    data-locker="16">
-                16
-            </button>
 
-            <button class="locker reserved"
-                    disabled>
-                17
-            </button>
+            <!-- وقت البداية -->
+            <div class="form-group">
 
-            <button class="locker available"
-                    data-locker="18">
-                18
-            </button>
+                <label for="startTime">
+                    وقت البداية
+                </label>
 
-            <button class="locker available"
-                    data-locker="19">
-                19
-            </button>
+                <input
+                    type="time"
+                    id="startTime"
+                    required>
 
-            <button class="locker reserved"
-                    disabled>
-                20
-            </button>
+            </div>
 
 
-            <button class="locker available"
-                    data-locker="21">
-                21
-            </button>
 
-            <button class="locker available"
-                    data-locker="22">
-                22
-            </button>
+            <!-- تاريخ النهاية -->
+            <div class="form-group">
 
-            <button class="locker reserved"
-                    disabled>
-                23
-            </button>
+                <label for="endDate">
+                    تاريخ النهاية
+                </label>
 
-            <button class="locker available"
-                    data-locker="24">
-                24
-            </button>
+                <input
+                    type="date"
+                    id="endDate"
+                    required>
 
-            <button class="locker available"
-                    data-locker="25">
-                25
-            </button>
+                <small>
+                    أقصى مدة للحجز شهر واحد.
+                </small>
+
+            </div>
+
+
+
+            <!-- وقت النهاية -->
+            <div class="form-group">
+
+                <label for="endTime">
+                    وقت النهاية
+                </label>
+
+                <input
+                    type="time"
+                    id="endTime"
+                    required>
+
+            </div>
 
         </div>
 
 
-        <!-- الحجز -->
-        <div class="booking-card">
 
-            <h3 id="selectedText">
-                هل تريد حجز خزانة؟
-            </h3>
+        <!-- مدة الحجز -->
+        <div class="price-card">
 
-            <p id="bookingHint">
-                اضغط على الخزانة المتاحة لاختيارها،
-                ثم انتقل إلى تفاصيل الحجز.
-            </p>
+            <span>
+                مدة الحجز
+            </span>
 
-
-            <a href="booking-details.html"
-               class="main-button"
-               id="continueButton">
-
-                الانتقال إلى تفاصيل الحجز
-
-            </a>
+            <strong id="durationText">
+                —
+            </strong>
 
         </div>
+
+
+
+        <!-- تأكيد الحجز -->
+        <button
+            type="button"
+            class="main-button confirm"
+            id="confirmButton">
+
+            تأكيد الحجز
+
+        </button>
+
+
+
+        <!-- العودة للرئيسية -->
+        <a href="index.html"
+           class="back-home-button">
+
+            العودة للصفحة الرئيسية
+
+        </a>
+
 
     </main>
 
 </div>
 
 
+
 <script>
 
 /* =========================
-   قراءة المبنى والدور
+   رقم الخزانة
 ========================= */
 
-const buildingName =
-    localStorage.getItem("buildingName");
+const selectedLocker =
+    localStorage.getItem("selectedLocker");
 
-const floorName =
-    localStorage.getItem("floorName");
-
-
-if (buildingName) {
-
-    document.getElementById("buildingName").textContent =
-        buildingName;
-
-}
+const lockerNumber =
+    document.getElementById("lockerNumber");
 
 
-if (floorName) {
+if (selectedLocker) {
 
-    document.getElementById("floorName").textContent =
-        floorName;
+    lockerNumber.textContent =
+        selectedLocker;
+
+} else {
+
+    lockerNumber.textContent =
+        "غير محدد";
 
 }
+
 
 
 /* =========================
-   اختيار الخزانة
+   عناصر الحجز
 ========================= */
 
-const lockers =
-    document.querySelectorAll(".locker.available");
+const startDate =
+    document.getElementById("startDate");
+
+const endDate =
+    document.getElementById("endDate");
+
+const startTime =
+    document.getElementById("startTime");
+
+const endTime =
+    document.getElementById("endTime");
+
+const durationText =
+    document.getElementById("durationText");
 
 
-const selectedText =
-    document.getElementById("selectedText");
+const today =
+    new Date();
 
 
-const bookingHint =
-    document.getElementById("bookingHint");
+
+/* =========================
+   تنسيق التاريخ
+========================= */
+
+function formatDate(date) {
+
+    const year =
+        date.getFullYear();
+
+    const month =
+        String(date.getMonth() + 1)
+        .padStart(2, "0");
+
+    const day =
+        String(date.getDate())
+        .padStart(2, "0");
+
+    return year +
+        "-" +
+        month +
+        "-" +
+        day;
+}
 
 
-const continueButton =
-    document.getElementById("continueButton");
+
+/* =========================
+   إضافة شهر
+========================= */
+
+function addOneMonth(dateString) {
+
+    const parts =
+        dateString.split("-");
+
+    const year =
+        Number(parts[0]);
+
+    const month =
+        Number(parts[1]);
+
+    const day =
+        Number(parts[2]);
 
 
-lockers.forEach(function(locker) {
-
-    locker.addEventListener("click", function() {
-
-        lockers.forEach(function(item) {
-
-            item.classList.remove("selected");
-
-        });
+    const lastDayNextMonth =
+        new Date(
+            year,
+            month + 1,
+            0
+        ).getDate();
 
 
-        locker.classList.add("selected");
-
-
-        const lockerNumber =
-            locker.getAttribute("data-locker");
-
-
-        localStorage.setItem(
-            "selectedLocker",
-            lockerNumber
+    const finalDay =
+        Math.min(
+            day,
+            lastDayNextMonth
         );
 
 
-        selectedText.textContent =
-            "تم اختيار الخزانة رقم " +
-            lockerNumber;
+    return year +
+        "-" +
+        String(month + 1).padStart(2, "0") +
+        "-" +
+        String(finalDay).padStart(2, "0");
+}
 
-
-        bookingHint.textContent =
-            "يمكنك الآن الانتقال إلى تفاصيل الحجز واختيار التاريخ والوقت.";
-
-    });
-
-});
 
 
 /* =========================
-   زر تفاصيل الحجز
+   القيم الافتراضية
 ========================= */
 
-continueButton.addEventListener(
-    "click",
-    function(event) {
+startDate.min =
+    formatDate(today);
 
-        const selectedLocker =
-            localStorage.getItem("selectedLocker");
+startDate.value =
+    formatDate(today);
+
+startTime.value =
+    "08:00";
+
+endTime.value =
+    "09:00";
 
 
-        if (!selectedLocker) {
 
-            event.preventDefault();
+/* =========================
+   تاريخ النهاية
+========================= */
 
-            alert(
-                "فضلاً اختاري خزانة متاحة أولاً."
-            );
+function updateEndDate() {
 
-        }
+    if (!startDate.value) {
+        return;
+    }
+
+
+    endDate.min =
+        startDate.value;
+
+
+    endDate.max =
+        addOneMonth(
+            startDate.value
+        );
+
+
+    if (
+        !endDate.value ||
+        endDate.value < endDate.min ||
+        endDate.value > endDate.max
+    ) {
+
+        endDate.value =
+            startDate.value;
 
     }
+
+
+    calculateDuration();
+}
+
+
+
+/* =========================
+   حساب مدة الحجز
+========================= */
+
+function calculateDuration() {
+
+    if (
+        !startDate.value ||
+        !endDate.value ||
+        !startTime.value ||
+        !endTime.value
+    ) {
+
+        durationText.textContent =
+            "—";
+
+        return;
+    }
+
+
+    const start =
+        new Date(
+            startDate.value +
+            "T" +
+            startTime.value
+        );
+
+
+    const end =
+        new Date(
+            endDate.value +
+            "T" +
+            endTime.value
+        );
+
+
+    const difference =
+        end - start;
+
+
+    if (difference <= 0) {
+
+        durationText.textContent =
+            "تحققي من التاريخ والوقت";
+
+        return;
+    }
+
+
+    const totalHours =
+        Math.round(
+            difference / 3600000
+        );
+
+
+    const days =
+        Math.floor(
+            totalHours / 24
+        );
+
+
+    const hours =
+        totalHours % 24;
+
+
+    if (
+        days > 0 &&
+        hours > 0
+    ) {
+
+        durationText.textContent =
+            days +
+            " يوم و " +
+            hours +
+            " ساعة";
+
+    }
+
+    else if (days > 0) {
+
+        durationText.textContent =
+            days +
+            " يوم";
+
+    }
+
+    else {
+
+        durationText.textContent =
+            hours +
+            " ساعة";
+
+    }
+}
+
+
+
+/* =========================
+   تحديث الحقول
+========================= */
+
+startDate.addEventListener(
+    "change",
+    updateEndDate
 );
 
 
+endDate.addEventListener(
+    "change",
+    calculateDuration
+);
+
+
+startTime.addEventListener(
+    "change",
+    calculateDuration
+);
+
+
+endTime.addEventListener(
+    "change",
+    calculateDuration
+);
+
+
+updateEndDate();
+
+
+
 /* =========================
-   القائمة ☰
+   تأكيد الحجز
+========================= */
+
+document
+    .getElementById("confirmButton")
+    .addEventListener(
+        "click",
+        function() {
+
+            if (!selectedLocker) {
+
+                alert(
+                    "فضلاً ارجعي للصفحة الرئيسية واختاري خزانة متاحة أولاً."
+                );
+
+                return;
+            }
+
+
+            if (
+                !startDate.value ||
+                !endDate.value ||
+                !startTime.value ||
+                !endTime.value
+            ) {
+
+                alert(
+                    "فضلاً أدخلي جميع تفاصيل الحجز."
+                );
+
+                return;
+            }
+
+
+            const maximumDate =
+                addOneMonth(
+                    startDate.value
+                );
+
+
+            if (
+                endDate.value >
+                maximumDate
+            ) {
+
+                alert(
+                    "أقصى مدة للحجز هي شهر واحد."
+                );
+
+                return;
+            }
+
+
+            const start =
+                new Date(
+                    startDate.value +
+                    "T" +
+                    startTime.value
+                );
+
+
+            const end =
+                new Date(
+                    endDate.value +
+                    "T" +
+                    endTime.value
+                );
+
+
+            if (end <= start) {
+
+                alert(
+                    "وقت النهاية يجب أن يكون بعد وقت البداية."
+                );
+
+                return;
+            }
+
+
+            alert(
+                "✅ تم تأكيد الحجز بنجاح!\n\n" +
+                "تم حجز الخزانة رقم " +
+                selectedLocker +
+                "."
+            );
+
+        }
+    );
+
+
+
+/* =========================
+   القائمة
 ========================= */
 
 const menuButton =
     document.getElementById("menuButton");
-
 
 const menuDropdown =
     document.getElementById("menuDropdown");
@@ -387,7 +638,9 @@ menuButton.addEventListener(
     "click",
     function() {
 
-        menuDropdown.classList.toggle("open");
+        menuDropdown.classList.toggle(
+            "open"
+        );
 
     }
 );
