@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Locka - الرئيسية</title>
-
+    <title>خزانة - الخزانات المتاحة</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,155 +12,137 @@
 
 <div class="app">
 
-    <!-- الهيدر -->
     <header class="header">
 
-        <img
-            src="e5c085fd-15d1-4d6d-a512-0117aad22fb9.jpeg"
-            class="logo"
-            alt="Locka"
-        >
+        <img src="e5c085fd-15d1-4d6d-a512-0117aad22fb9.jpeg"
+             class="logo"
+             alt="خزانة">
 
         <button class="menu-button" id="menuButton">☰</button>
 
         <div class="menu-dropdown" id="menuDropdown">
 
-            <a href="index.html" class="active">
-                <span class="menu-icon">🏠</span>
-                <span>الرئيسية</span>
+            <a href="index.html">
+                🏠 الرئيسية
             </a>
 
             <a href="booking-details.html">
-                <span class="menu-icon">🔒</span>
-                <span>حجوزاتي</span>
+                🔒 حجوزاتي
             </a>
 
             <a href="#">
-                <span class="menu-icon">🔔</span>
-                <span>التنبيهات</span>
+                🔔 التنبيهات
             </a>
 
             <a href="#">
-                <span class="menu-icon">🎧</span>
-                <span>الدعم والمساعدة</span>
+                🎧 الدعم والمساعدة
             </a>
 
             <a href="#">
-                <span class="menu-icon">👤</span>
-                <span>حسابي</span>
+                👤 حسابي
             </a>
 
         </div>
 
-        <h1>Locka</h1>
+        <a href="index.html" class="back">
+            ‹
+        </a>
+
+        <h1>
+            الخزانات المتاحة
+        </h1>
 
     </header>
 
 
-    <!-- المحتوى -->
     <main class="content">
 
-        <section class="welcome-section">
+        <div class="location-box">
 
-            <h2>مرحبًا بك في Locka</h2>
+            <h2>
+                المبنى:
+                <span id="buildingName">—</span>
+            </h2>
 
             <p>
-                احجزي خزانتك بسهولة وأمان
+                الدور:
+                <span id="floorName">—</span>
+                - اختر الخزانة المناسبة لك
             </p>
 
-        </section>
+        </div>
 
 
-        <section class="lockers-section">
+        <div class="legend">
 
-            <h2>الخزائن المتاحة</h2>
-
-
-            <div class="locker-card">
-
-                <div class="locker-number">
-                    🔒
-                </div>
-
-                <div class="locker-info">
-
-                    <h3>الخزانة رقم 1</h3>
-
-                    <p>متاحة للحجز</p>
-
-                    <span class="available">
-                        متاحة
-                    </span>
-
-                </div>
-
-                <a
-                    href="booking-details.html?locker=1"
-                    class="book-button"
-                >
-                    احجز الآن
-                </a>
-
+            <div class="legend-item">
+                <span class="dot available-dot"></span>
+                متاح
             </div>
 
-
-            <div class="locker-card">
-
-                <div class="locker-number">
-                    🔒
-                </div>
-
-                <div class="locker-info">
-
-                    <h3>الخزانة رقم 2</h3>
-
-                    <p>متاحة للحجز</p>
-
-                    <span class="available">
-                        متاحة
-                    </span>
-
-                </div>
-
-                <a
-                    href="booking-details.html?locker=2"
-                    class="book-button"
-                >
-                    احجز الآن
-                </a>
-
+            <div class="legend-item">
+                <span class="dot reserved-dot"></span>
+                محجوز
             </div>
 
-
-            <div class="locker-card">
-
-                <div class="locker-number">
-                    🔒
-                </div>
-
-                <div class="locker-info">
-
-                    <h3>الخزانة رقم 3</h3>
-
-                    <p>متاحة للحجز</p>
-
-                    <span class="available">
-                        متاحة
-                    </span>
-
-                </div>
-
-                <a
-                    href="booking-details.html?locker=3"
-                    class="book-button"
-                >
-                    احجز الآن
-                </a>
-
-            </div>
+        </div>
 
 
-        </section>
+        <div class="lockers">
+
+            <button class="locker available" data-locker="1">1</button>
+            <button class="locker available" data-locker="2">2</button>
+            <button class="locker available" data-locker="3">3</button>
+            <button class="locker reserved" disabled>4</button>
+            <button class="locker reserved" disabled>5</button>
+
+            <button class="locker available" data-locker="6">6</button>
+            <button class="locker available" data-locker="7">7</button>
+            <button class="locker reserved" disabled>8</button>
+            <button class="locker available" data-locker="9">9</button>
+            <button class="locker available" data-locker="10">10</button>
+
+            <button class="locker available" data-locker="11">11</button>
+            <button class="locker available" data-locker="12">12</button>
+            <button class="locker reserved" disabled>13</button>
+            <button class="locker reserved" disabled>14</button>
+            <button class="locker available" data-locker="15">15</button>
+
+            <button class="locker available" data-locker="16">16</button>
+            <button class="locker reserved" disabled>17</button>
+            <button class="locker available" data-locker="18">18</button>
+            <button class="locker available" data-locker="19">19</button>
+            <button class="locker reserved" disabled>20</button>
+
+            <button class="locker available" data-locker="21">21</button>
+            <button class="locker available" data-locker="22">22</button>
+            <button class="locker reserved" disabled>23</button>
+            <button class="locker available" data-locker="24">24</button>
+            <button class="locker available" data-locker="25">25</button>
+
+        </div>
+
+
+        <div class="booking-card">
+
+            <h3 id="selectedText">
+                هل تريد حجز خزانة؟
+            </h3>
+
+            <p id="bookingHint">
+                اضغط على الخزانة المتاحة لاختيارها،
+                ثم انتقل إلى تفاصيل الحجز.
+            </p>
+
+            <a href="booking-details.html"
+               class="main-button"
+               id="continueButton">
+
+                الانتقال إلى تفاصيل الحجز
+
+            </a>
+
+        </div>
 
     </main>
 
@@ -171,31 +151,103 @@
 
 <script>
 
-    const menuButton = document.getElementById("menuButton");
-    const menuDropdown = document.getElementById("menuDropdown");
+const buildingName =
+    localStorage.getItem("buildingName");
 
-    menuButton.addEventListener("click", function () {
+const floorName =
+    localStorage.getItem("floorName");
 
-        menuDropdown.classList.toggle("open");
+if (buildingName) {
+    document.getElementById("buildingName").textContent =
+        buildingName;
+}
+
+if (floorName) {
+    document.getElementById("floorName").textContent =
+        floorName;
+}
+
+
+const lockers =
+    document.querySelectorAll(".locker.available");
+
+const selectedText =
+    document.getElementById("selectedText");
+
+const bookingHint =
+    document.getElementById("bookingHint");
+
+const continueButton =
+    document.getElementById("continueButton");
+
+
+lockers.forEach(function(locker) {
+
+    locker.addEventListener("click", function() {
+
+        lockers.forEach(function(item) {
+            item.classList.remove("selected");
+        });
+
+        locker.classList.add("selected");
+
+        const lockerNumber =
+            locker.getAttribute("data-locker");
+
+        localStorage.setItem(
+            "selectedLocker",
+            lockerNumber
+        );
+
+        selectedText.textContent =
+            "تم اختيار الخزانة رقم " +
+            lockerNumber;
+
+        bookingHint.textContent =
+            "يمكنك الآن الانتقال إلى تفاصيل الحجز واختيار التاريخ والوقت.";
 
     });
 
+});
 
-    document.addEventListener("click", function (event) {
 
-        if (
-            !menuButton.contains(event.target) &&
-            !menuDropdown.contains(event.target)
-        ) {
+continueButton.addEventListener(
+    "click",
+    function(event) {
 
-            menuDropdown.classList.remove("open");
+        const selectedLocker =
+            localStorage.getItem("selectedLocker");
+
+        if (!selectedLocker) {
+
+            event.preventDefault();
+
+            alert(
+                "فضلاً اختاري خزانة متاحة أولاً."
+            );
 
         }
 
-    });
+    }
+);
+
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const menuDropdown =
+    document.getElementById("menuDropdown");
+
+menuButton.addEventListener(
+    "click",
+    function() {
+
+        menuDropdown.classList.toggle("open");
+
+    }
+);
 
 </script>
 
 </body>
-
 </html>
