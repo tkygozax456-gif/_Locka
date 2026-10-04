@@ -1,149 +1,270 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
+
     <title>تفاصيل الحجز - Locka</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <div class="app">
-    <!-- ================= HEADER ================= -->
-    <header class="top-bar">
-        <img src="logo.png"
-             alt="Locka"
-             class="logo">
-        <div class="menu-button">
-            ☰
+
+    <!-- الهيدر -->
+    <header class="header">
+
+        <img
+            src="e5c085fd-15d1-4d6d-a512-0117aad22fb9.jpeg"
+            class="logo"
+            alt="Locka"
+        >
+
+        <button class="menu-button" id="menuButton">☰</button>
+
+        <div class="menu-dropdown" id="menuDropdown">
+
+            <a href="index.html">
+                <span class="menu-icon">🏠</span>
+                <span>الرئيسية</span>
+            </a>
+
+            <a href="booking-details.html" class="active">
+                <span class="menu-icon">🔒</span>
+                <span>حجوزاتي</span>
+            </a>
+
+            <a href="#">
+                <span class="menu-icon">🔔</span>
+                <span>التنبيهات</span>
+            </a>
+
+            <a href="#">
+                <span class="menu-icon">🎧</span>
+                <span>الدعم والمساعدة</span>
+            </a>
+
+            <a href="#">
+                <span class="menu-icon">👤</span>
+                <span>حسابي</span>
+            </a>
+
         </div>
-    </header>
-    <!-- ================= PAGE ================= -->
-    <main class="booking-page">
-        <!-- الرجوع -->
-        <a href="https://tkygozax456-gif.github.io/_Locka/"
-           class="back-button">
-            ←
+
+        <a href="index.html" class="back">
+            ‹
         </a>
+
         <h1>تفاصيل الحجز</h1>
-        <div class="locker-icon">
-            🔒
-        </div>
-        <h2>الخزانة رقم -</h2>
-        <!-- ================= BOOKING CARD ================= -->
-        <section class="booking-card">
-            <h3>تفاصيل الحجز</h3>
-            <div class="input-group">
-                <label for="start-date">
-                    تاريخ البداية
-                </label>
-                <input
-                    type="date"
-                    id="start-date"
-                >
+
+    </header>
+
+
+    <!-- المحتوى -->
+    <main class="content">
+
+        <section class="locker-info-card">
+
+            <div class="locker-big-icon">
+                🔒
             </div>
-            <div class="input-group">
-                <label for="start-time">
-                    وقت البداية
-                </label>
-                <input
-                    type="time"
-                    id="start-time"
-                >
-            </div>
-            <div class="input-group">
-                <label for="end-date">
-                    تاريخ النهاية
-                </label>
-                <input
-                    type="date"
-                    id="end-date"
-                >
-                <small>
-                    أقصى مدة للحجز شهر واحد.
-                </small>
-            </div>
-            <div class="input-group">
-                <label for="end-time">
-                    وقت النهاية
-                </label>
-                <input
-                    type="time"
-                    id="end-time"
-                >
-            </div>
-            <div class="duration">
-                <span>
-                    مدة الحجز
+
+            <div>
+
+                <h2 id="lockerTitle">
+                    الخزانة رقم 1
+                </h2>
+
+                <p>
+                    خزانتك جاهزة للحجز
+                </p>
+
+                <span class="available">
+                    متاحة
                 </span>
-                <strong>
-                    —
-                </strong>
+
             </div>
-            <button class="confirm-button">
+
+        </section>
+
+
+        <section class="booking-form">
+
+            <h2>
+                بيانات الحجز
+            </h2>
+
+
+            <label for="bookingDate">
+                تاريخ الحجز
+            </label>
+
+            <input
+                type="date"
+                id="bookingDate"
+            >
+
+
+            <label for="startTime">
+                وقت بداية الحجز
+            </label>
+
+            <input
+                type="time"
+                id="startTime"
+            >
+
+
+            <label for="endTime">
+                وقت نهاية الحجز
+            </label>
+
+            <input
+                type="time"
+                id="endTime"
+            >
+
+
+            <div class="price-card">
+
+                <span>
+                    السعر
+                </span>
+
+                <strong>
+                    10 ريال
+                </strong>
+
+            </div>
+
+
+            <button
+                class="main-button"
+                id="confirmButton"
+            >
                 تأكيد الحجز
             </button>
+
+
+            <a
+                href="index.html"
+                class="back-home-button"
+            >
+                العودة للصفحة الرئيسية
+            </a>
+
         </section>
-        <!-- زر العودة -->
-        <a href="https://tkygozax456-gif.github.io/_Locka/"
-           class="home-button">
-            🏠
-            العودة للصفحة الرئيسية
-        </a>
+
     </main>
-    <!-- ================= BOTTOM MENU ================= -->
-    <nav class="bottom-menu">
-        <!-- الرئيسية -->
-        <a href="https://tkygozax456-gif.github.io/_Locka/"
-           class="menu-item active">
-            <span class="menu-icon">
-                🏠
-            </span>
-            <span class="menu-text">
-                الرئيسية
-            </span>
-        </a>
-        <!-- حجوزاتي -->
-        <a href="https://tkygozax456-gif.github.io/_Locka/booking-details.html"
-           class="menu-item">
-            <span class="menu-icon">
-                🔒
-            </span>
-            <span class="menu-text">
-                حجوزاتي
-            </span>
-        </a>
-        <!-- التنبيهات -->
-        <a href="#"
-           class="menu-item">
-            <span class="menu-icon">
-                🔔
-            </span>
-            <span class="menu-text">
-                التنبيهات
-            </span>
-        </a>
-        <!-- الدعم -->
-        <a href="#"
-           class="menu-item">
-            <span class="menu-icon">
-                🎧
-            </span>
-            <span class="menu-text">
-                الدعم والمساعدة
-            </span>
-        </a>
-        <!-- الحساب -->
-        <a href="#"
-           class="menu-item">
-            <span class="menu-icon">
-                👤
-            </span>
-            <span class="menu-text">
-                حسابي
-            </span>
-        </a>
-    </nav>
+
 </div>
+
+
+<script>
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const menuDropdown =
+        document.getElementById("menuDropdown");
+
+
+    menuButton.addEventListener("click", function () {
+
+        menuDropdown.classList.toggle("open");
+
+    });
+
+
+    document.addEventListener("click", function (event) {
+
+        if (
+            !menuButton.contains(event.target) &&
+            !menuDropdown.contains(event.target)
+        ) {
+
+            menuDropdown.classList.remove("open");
+
+        }
+
+    });
+
+
+    /* معرفة رقم الخزانة من الرابط */
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const locker =
+        params.get("locker");
+
+
+    if (locker) {
+
+        document.getElementById("lockerTitle").textContent =
+            "الخزانة رقم " + locker;
+
+    }
+
+
+    /* التاريخ */
+
+    const bookingDate =
+        document.getElementById("bookingDate");
+
+    const today =
+        new Date().toISOString().split("T")[0];
+
+    bookingDate.min = today;
+
+    bookingDate.value = today;
+
+
+    /* تأكيد الحجز */
+
+    document
+        .getElementById("confirmButton")
+        .addEventListener("click", function () {
+
+            const date =
+                document.getElementById("bookingDate").value;
+
+            const start =
+                document.getElementById("startTime").value;
+
+            const end =
+                document.getElementById("endTime").value;
+
+
+            if (!date || !start || !end) {
+
+                alert("فضلاً أدخلي جميع بيانات الحجز");
+
+                return;
+
+            }
+
+
+            if (end <= start) {
+
+                alert("وقت النهاية يجب أن يكون بعد وقت البداية");
+
+                return;
+
+            }
+
+
+            alert("تم تأكيد الحجز بنجاح");
+
+        });
+
+</script>
+
 </body>
+
 </html>
