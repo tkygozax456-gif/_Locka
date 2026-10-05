@@ -437,3 +437,19 @@ body {
     }
 
 }
+.menu-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu-icon {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: #2d5b9e;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
