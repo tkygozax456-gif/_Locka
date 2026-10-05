@@ -4,8 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>خزانة - الخزانات المتاحة</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .menu-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-icon {
+            width: 25px;
+            height: 25px;
+            fill: none;
+            stroke: #2d5b9e;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,33 +41,80 @@
 
         <button class="menu-button" id="menuButton">☰</button>
 
+
+        <!-- القائمة -->
+
         <div class="menu-dropdown" id="menuDropdown">
 
             <a href="index.html">
-                🏠 الرئيسية
+
+                <svg class="menu-icon" viewBox="0 0 24 24">
+                    <path d="M3 10.5 12 3l9 7.5"></path>
+                    <path d="M5 9.5V21h14V9.5"></path>
+                    <path d="M9 21v-7h6v7"></path>
+                </svg>
+
+                الرئيسية
+
             </a>
+
 
             <a href="booking-details.html">
-                🔒 حجوزاتي
+
+                <svg class="menu-icon" viewBox="0 0 24 24">
+                    <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+                    <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+                </svg>
+
+                حجوزاتي
+
             </a>
 
-            <a href="#">
-                🔔 التنبيهات
-            </a>
 
             <a href="#">
-                🎧 الدعم والمساعدة
+
+                <svg class="menu-icon" viewBox="0 0 24 24">
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+                    <path d="M10 21h4"></path>
+                </svg>
+
+                التنبيهات
+
             </a>
 
+
             <a href="#">
-                👤 حسابي
+
+                <svg class="menu-icon" viewBox="0 0 24 24">
+                    <path d="M4 14v-2a8 8 0 0 1 16 0v2"></path>
+                    <path d="M4 14h3v5H4z"></path>
+                    <path d="M17 14h3v5h-3z"></path>
+                    <path d="M17 19c0 1.1-1.8 2-4 2"></path>
+                </svg>
+
+                الدعم والمساعدة
+
+            </a>
+
+
+            <a href="#">
+
+                <svg class="menu-icon" viewBox="0 0 24 24">
+                    <circle cx="12" cy="7" r="3.5"></circle>
+                    <path d="M5 21c.7-4 3-6 7-6s6.3 2 7 6"></path>
+                </svg>
+
+                حسابي
+
             </a>
 
         </div>
 
+
         <a href="index.html" class="back">
             ‹
         </a>
+
 
         <h1>
             الخزانات المتاحة
@@ -56,6 +124,7 @@
 
 
     <main class="content">
+
 
         <div class="location-box">
 
@@ -76,13 +145,20 @@
         <div class="legend">
 
             <div class="legend-item">
+
                 <span class="dot available-dot"></span>
+
                 متاح
+
             </div>
 
+
             <div class="legend-item">
+
                 <span class="dot reserved-dot"></span>
+
                 محجوز
+
             </div>
 
         </div>
@@ -157,25 +233,34 @@ const buildingName =
 const floorName =
     localStorage.getItem("floorName");
 
+
 if (buildingName) {
+
     document.getElementById("buildingName").textContent =
         buildingName;
+
 }
 
+
 if (floorName) {
+
     document.getElementById("floorName").textContent =
         floorName;
+
 }
 
 
 const lockers =
     document.querySelectorAll(".locker.available");
 
+
 const selectedText =
     document.getElementById("selectedText");
 
+
 const bookingHint =
     document.getElementById("bookingHint");
+
 
 const continueButton =
     document.getElementById("continueButton");
@@ -186,22 +271,29 @@ lockers.forEach(function(locker) {
     locker.addEventListener("click", function() {
 
         lockers.forEach(function(item) {
+
             item.classList.remove("selected");
+
         });
+
 
         locker.classList.add("selected");
 
+
         const lockerNumber =
             locker.getAttribute("data-locker");
+
 
         localStorage.setItem(
             "selectedLocker",
             lockerNumber
         );
 
+
         selectedText.textContent =
             "تم اختيار الخزانة رقم " +
             lockerNumber;
+
 
         bookingHint.textContent =
             "يمكنك الآن الانتقال إلى تفاصيل الحجز واختيار التاريخ والوقت.";
@@ -218,9 +310,11 @@ continueButton.addEventListener(
         const selectedLocker =
             localStorage.getItem("selectedLocker");
 
+
         if (!selectedLocker) {
 
             event.preventDefault();
+
 
             alert(
                 "فضلاً اختاري خزانة متاحة أولاً."
@@ -235,8 +329,10 @@ continueButton.addEventListener(
 const menuButton =
     document.getElementById("menuButton");
 
+
 const menuDropdown =
     document.getElementById("menuDropdown");
+
 
 menuButton.addEventListener(
     "click",
@@ -249,5 +345,7 @@ menuButton.addEventListener(
 
 </script>
 
+
 </body>
+
 </html>
